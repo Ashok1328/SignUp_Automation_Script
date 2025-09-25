@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { parseEnv } from "util";
 
 test("Agent Profile Registration Process", async ({ page }) => {
   // Application URL

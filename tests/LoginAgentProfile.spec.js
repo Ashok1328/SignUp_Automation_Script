@@ -1,10 +1,9 @@
-import {test, expect} from '@playwright/test'
+import { test, expect } from "@playwright/test";
 
-test('Logging into Application', async({ page }) =>{
-
+test("Logging into Application", async ({ page }) => {
   await page.goto("https://authorized-partner.netlify.app/login");
 
-  await page.locator("#email").fill('Ashokkhatiwada1990@gmail.com');
+  await page.locator("#email").fill("Ashokkhatiwada1990@gmail.com");
 
   await page.locator("#password").fill("Kriti123@");
 
@@ -16,10 +15,11 @@ test('Logging into Application', async({ page }) =>{
 
   await page.waitForTimeout(5000);
 
-  await page.locator("//div[contains(@type,'button')][normalize-space()='Logout']").click();
+  await page
+    .locator("//div[contains(@type,'button')][normalize-space()='Logout']")
+    .click();
 
   await page.locator("//button[normalize-space()='Logout']").click();
 
   await page.waitForTimeout(5000);
-
-})
+});

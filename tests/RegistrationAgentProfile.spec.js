@@ -112,7 +112,6 @@ test("Agent Profile Registration Process", async ({ page }) => {
 
   await page.locator("//button[normalize-space()='Back']").click();
 
-
   //Professional Experience Form
 
   await page.getByRole("combobox", { name: "Years of Experience" }).click();
@@ -154,11 +153,11 @@ test("Agent Profile Registration Process", async ({ page }) => {
     .getByRole("textbox", { name: "Business Registration Number" })
     .fill("76531423656313");
 
-  await page.getByRole("combobox", {name: "Preferred Countries"}).click();
+  await page.getByRole("combobox", { name: "Preferred Countries" }).click();
 
   await page.locator("//span[normalize-space()='New Zealand']").click();
 
-  await page.getByRole("checkbox",{name: "Universities"}).check();
+  await page.getByRole("checkbox", { name: "Universities" }).check();
 
   await page
     .getByRole("textbox", { name: "Certification Details" })

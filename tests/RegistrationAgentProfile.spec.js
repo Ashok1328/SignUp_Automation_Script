@@ -162,5 +162,12 @@ test("Agent Profile Registration Process", async ({ page }) => {
     .getByRole("textbox", { name: "Certification Details" })
     .fill("Quality Assurance Training");
 
+  await page
+    .getByText("Upload a file").first().setInputFiles("tests/uplaodFiles/CINDERS BENEATH.pdf");
+
+ // expect(await page.getByText("Upload a file")).toHaveText("CINDERS BENEATH.pdf");
+
+  await page.waitForTimeout(3000);
+
   // await page.locator("//button[normalize-space()='Submit']").click();
 });
